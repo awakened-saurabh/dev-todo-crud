@@ -1,7 +1,7 @@
 <main class="todo-container">
   <div class="addTask-style">
-    <input [(ngModel)]="newTask" placeholder="Enter new Task" class="todo-input" />
-    <button (click)="addTask()" class="todo-button">Add </button>
+    <input (keydown.enter)="addTask()" [(ngModel)]="newTask" placeholder="Enter new Task" class="todo-input" />
+    <button (click)="addTask()"  class="todo-button">Add </button>
   </div>
   <ul class="list-style">
     <li *ngFor="let todoItem of todolist; let i = index" [ngClass]="{ 'completed': todoItem.checked }">
@@ -9,8 +9,11 @@
       [checked]="todoItem.checked"
       (change)="toggleCompleted(i)"
       />
-      <span [class.completed]="todoItem.checked" (click)="updateTask(i)">{{ todoItem.task }}</span>
-      <button (click)="deleteTask(todoItem.id)"> Delete </button>
+      <span [class.completed]="todoItem.checked">{{ todoItem.task }}</span>
+      <div class="button-style">
+        <button id="update-button"  (click)="updateTask(i)"> Update </button>
+        <button (click)="deleteTask(todoItem.id)"> Delete </button>
+      </div>
   </ul>
 </main>
 
