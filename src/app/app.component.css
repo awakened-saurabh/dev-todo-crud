@@ -1,0 +1,65 @@
+.todo-container {
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+  border-radius: 20px;
+}
+
+.addTask-style {
+ display: flex;
+ justify-content: center;
+ margin-bottom: 20px;
+}
+
+.addTask-style input{
+  flex: 1;
+  padding: 10px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 8px;
+  
+}
+
+.addTask-style button{
+  padding: 10px 20px;
+  font-size: 15px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.list-style{
+  list-style: none;
+  padding: 0;
+}
+
+.list-style li{
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.list-style button{
+  padding: 5px 10px;
+  font-size: 15px;
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.list-style li.completed span{
+  text-decoration: line-through;
+  color: #888;
+}
